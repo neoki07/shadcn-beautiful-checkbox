@@ -1,7 +1,7 @@
-import { Checkbox } from "@/components/ui/checkbox";
-import { Checkbox as BeautifulCheckbox } from "@/components/ui/beautiful-checkbox";
+import { Checkbox as BeautifulCheckbox } from "@/components/ui/beautiful-checkbox"
+import { Checkbox } from "@/components/ui/checkbox"
 
-const CHECKBOX_STATES = [false, true, "indeterminate"] as const;
+const CHECKBOX_STATES = [false, true, "indeterminate"] as const
 
 const SECTION_ITEMS = [
   {
@@ -12,7 +12,7 @@ const SECTION_ITEMS = [
     title: "shadcn/ui Checkbox",
     Component: Checkbox,
   },
-] as const;
+] as const
 
 export function Demo() {
   return (
@@ -36,5 +36,5 @@ export function Demo() {
         </fieldset>
       ))}
     </div>
-  );
+  )
 }

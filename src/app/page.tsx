@@ -1,10 +1,11 @@
-import Balancer from "react-wrap-balancer";
+import Link from "next/link"
+import Balancer from "react-wrap-balancer"
 
-import { siteConfig } from "@/config/site";
-import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
-import { Icons } from "./_components/icons";
-import { Demo } from "./_components/demo";
+import { siteConfig } from "@/config/site"
+import { buttonVariants } from "@/components/ui/button"
+
+import { Demo } from "./_components/demo"
+import { Icons } from "./_components/icons"
 
 export default function Home() {
   return (
@@ -39,5 +40,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }

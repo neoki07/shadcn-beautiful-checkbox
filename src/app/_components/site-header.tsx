@@ -1,11 +1,11 @@
-import Link from "next/link";
+import Link from "next/link"
 
-import { siteConfig } from "@/config/site";
-import { cn } from "@/lib/utils";
+import { siteConfig } from "@/config/site"
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
 
-import { Icons } from "./icons";
-import { ModeToggle } from "./mode-toggle";
-import { buttonVariants } from "@/components/ui/button";
+import { Icons } from "./icons"
+import { ModeToggle } from "./mode-toggle"
 
 export function SiteHeader() {
   return (
@@ -29,5 +29,5 @@ export function SiteHeader() {
         </nav>
       </div>
     </header>
-  );
+  )
 }

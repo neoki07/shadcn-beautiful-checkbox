@@ -1,7 +1,7 @@
 const repo = {
   name: "shadcn-beautiful-checkbox",
   owner: "neoki07",
-};
+}
 
 export const siteConfig = {
   name: repo.name,
@@ -12,6 +12,6 @@ export const siteConfig = {
     github: `https://github.com/${repo.owner}/${repo.name}`,
     me: `https://github.com/${repo.owner}`,
   },
-};
+}
 
-export type SiteConfig = typeof siteConfig;
+export type SiteConfig = typeof siteConfig

@@ -1,26 +1,30 @@
-import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
-import { cn } from "@/lib/utils";
-import "./globals.css";
-import { ThemeProvider } from "next-themes";
-import { SiteHeader } from "./_components/site-header";
-import { SiteFooter } from "./_components/site-footer";
-import { siteConfig } from "@/config/site";
+import type { Metadata } from "next"
+import { Inter as FontSans } from "next/font/google"
+
+import { cn } from "@/lib/utils"
+
+import "./globals.css"
+import { ThemeProvider } from "next-themes"
+
+import { siteConfig } from "@/config/site"
+
+import { SiteFooter } from "./_components/site-footer"
+import { SiteHeader } from "./_components/site-header"
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-});
+})
 
 export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -46,5 +50,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
