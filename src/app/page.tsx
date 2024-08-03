@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "./_components/icons";
+import { Demo } from "./_components/demo";
 
 export default function Home() {
   return (
@@ -29,6 +30,13 @@ export default function Home() {
           </span>
           <span className="text-xs sm:hidden">{siteConfig.repo.name}</span>
         </Link>
+      </div>
+      <div className="mt-10">
+        <div className="ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 relative rounded-md border">
+          <div className="flex min-h-[350px] w-full justify-center p-10 items-center">
+            <Demo />
+          </div>
+        </div>
       </div>
     </div>
   );
