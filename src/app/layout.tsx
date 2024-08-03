@@ -40,9 +40,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative flex min-h-screen min-w-[20rem] flex-col bg-background">
+          <div className="relative flex min-h-screen min-w-80 flex-col bg-background">
             <SiteHeader />
-            <main className="flex-1 container items-start py-8">
+            <main className="container flex-1 items-start py-8">
               {children}
             </main>
             <SiteFooter />

@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <div>
       <div className="space-y-2">
-        <h1 className="scroll-m-20 text-3xl font-bold tracking-tight text-center">
+        <h1 className="scroll-m-20 text-center text-3xl font-bold tracking-tight">
           {siteConfig.name}
         </h1>
-        <p className="text-base text-muted-foreground text-center">
+        <p className="text-center text-base text-muted-foreground">
           <Balancer>{siteConfig.description}</Balancer>
         </p>
       </div>
@@ -25,7 +25,7 @@ export default function Home() {
           rel="noreferrer"
           className={buttonVariants({ variant: "outline", size: "sm" })}
         >
-          <Icons.gitHub className="mr-1.5 sm:mr-2 size-3.5 sm:size-4" />
+          <Icons.gitHub className="mr-1.5 size-3.5 sm:mr-2 sm:size-4" />
           <span className="hidden sm:inline">
             {`${siteConfig.repo.owner}/${siteConfig.repo.name}`}
           </span>
@@ -33,8 +33,8 @@ export default function Home() {
         </Link>
       </div>
       <div className="mt-10">
-        <div className="ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 relative rounded-md border">
-          <div className="flex min-h-[350px] w-full justify-center p-10 items-center">
+        <div className="relative rounded-md border ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+          <div className="flex min-h-[350px] w-full items-center justify-center p-10">
             <Demo />
           </div>
         </div>

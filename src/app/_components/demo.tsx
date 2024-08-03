@@ -20,7 +20,7 @@ export function Demo() {
       {SECTION_ITEMS.map(({ title, Component }) => (
         <fieldset key={title} className="space-y-2">
           <legend className="font-semibold sm:text-center">{title}</legend>
-          <div className="flex flex-col sm:flex-row sm:items-center justify-center gap-2 sm:gap-4">
+          <div className="flex flex-col justify-center gap-2 sm:flex-row sm:items-center sm:gap-4">
             {CHECKBOX_STATES.map((state) => (
               <div key={String(state)} className="flex items-center space-x-2">
                 <Component id="terms" defaultChecked={state} />
