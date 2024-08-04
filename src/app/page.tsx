@@ -34,13 +34,7 @@ export default function Home() {
           <span className="sm:hidden">{siteConfig.repo.name}</span>
         </Link>
       </div>
-      <div className="mt-10">
-        <div className="relative rounded-md border ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-          <div className="flex min-h-[350px] w-full items-center justify-center p-10">
-            <Demo />
-          </div>
-        </div>
-      </div>
+      <Demo />
       <Installation />
       <Usage />
     </div>
