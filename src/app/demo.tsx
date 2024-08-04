@@ -22,18 +22,21 @@ export function Demo() {
             {[false, true].map((disabled) => (
               <>
                 {["unchecked", "checked", "indeterminate"].map((state) => {
+                  const checkboxId = `${title}-${state}${
+                    disabled ? "-disabled" : ""
+                  }`
                   const checkedValue =
                     state === "indeterminate" ? state : state === "checked"
 
                   return (
                     <div key={state} className="flex items-center space-x-2">
                       <Component
-                        id="terms"
+                        id={checkboxId}
                         defaultChecked={checkedValue}
                         disabled={disabled}
                       />
                       <label
-                        htmlFor="terms"
+                        htmlFor={checkboxId}
                         className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       >
                         {state}
