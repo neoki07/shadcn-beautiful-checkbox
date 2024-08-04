@@ -1,8 +1,6 @@
 import { Checkbox as BeautifulCheckbox } from "@/components/ui/beautiful-checkbox"
 import { Checkbox } from "@/components/ui/checkbox"
 
-const CHECKBOX_STATES = ["unchecked", "checked", "indeterminate"] as const
-
 const SECTION_ITEMS = [
   {
     title: "Beautiful Checkbox",
@@ -16,27 +14,35 @@ const SECTION_ITEMS = [
 
 export function Demo() {
   return (
-    <div className="flex flex-col items-center justify-center space-y-12">
+    <div className="flex flex-col items-center justify-center space-y-12 sm:space-y-8">
       {SECTION_ITEMS.map(({ title, Component }) => (
         <fieldset key={title} className="space-y-2">
           <legend className="font-semibold sm:text-center">{title}</legend>
-          <div className="flex flex-col justify-center gap-2 sm:flex-row sm:items-center sm:gap-4">
-            {CHECKBOX_STATES.map((state) => {
-              const checkedValue =
-                state === "indeterminate" ? state : state === "checked"
+          <div className="grid grid-flow-col grid-rows-3 gap-3 sm:grid-flow-row sm:grid-cols-3">
+            {[false, true].map((disabled) => (
+              <>
+                {["unchecked", "checked", "indeterminate"].map((state) => {
+                  const checkedValue =
+                    state === "indeterminate" ? state : state === "checked"
 
-              return (
-                <div key={state} className="flex items-center space-x-2">
-                  <Component id="terms" defaultChecked={checkedValue} />
-                  <label
-                    htmlFor="terms"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  >
-                    {state}
-                  </label>
-                </div>
-              )
-            })}
+                  return (
+                    <div key={state} className="flex items-center space-x-2">
+                      <Component
+                        id="terms"
+                        defaultChecked={checkedValue}
+                        disabled={disabled}
+                      />
+                      <label
+                        htmlFor="terms"
+                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      >
+                        {state}
+                      </label>
+                    </div>
+                  )
+                })}
+              </>
+            ))}
           </div>
         </fieldset>
       ))}
