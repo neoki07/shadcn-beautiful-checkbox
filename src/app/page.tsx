@@ -7,6 +7,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "./_components/icons"
 import { Demo } from "./demo"
 import { Installation } from "./installation"
+import { Usage } from "./usage"
 
 export default function Home() {
   return (
@@ -41,6 +42,7 @@ export default function Home() {
         </div>
       </div>
       <Installation />
+      <Usage />
     </div>
   )
 }
