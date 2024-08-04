@@ -1,16 +1,9 @@
 import fs from "fs"
 import path from "path"
-import Link from "next/link"
-import Balancer from "react-wrap-balancer"
-
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
 
 import { CodeBlock } from "./_components/code-block"
-import { Icons } from "./_components/icons"
 import { Step } from "./_components/step"
 import { Steps } from "./_components/steps"
-import { Demo } from "./demo"
 
 export function Installation() {
   const componentFilePath = path.join(
