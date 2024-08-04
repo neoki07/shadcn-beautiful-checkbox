@@ -7,10 +7,10 @@ import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
 
 import { CodeBlock } from "./_components/code-block"
-import { Demo } from "./_components/demo"
 import { Icons } from "./_components/icons"
 import { Step } from "./_components/step"
 import { Steps } from "./_components/steps"
+import { Demo } from "./demo"
 
 export default function Home() {
   const componentFilePath = path.join(
