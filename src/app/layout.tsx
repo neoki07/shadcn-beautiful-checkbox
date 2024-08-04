@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
-import { Inter as FontSans } from "next/font/google"
 
 import { cn } from "@/lib/utils"
 
 import "./globals.css"
+import { GeistSans } from "geist/font/sans"
 import { ThemeProvider } from "next-themes"
 
 import { siteConfig } from "@/config/site"
@@ -11,10 +11,7 @@ import { siteConfig } from "@/config/site"
 import { SiteFooter } from "./_components/site-footer"
 import { SiteHeader } from "./_components/site-header"
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
+const fontSans = GeistSans
 
 export const metadata: Metadata = {
   title: siteConfig.name,
