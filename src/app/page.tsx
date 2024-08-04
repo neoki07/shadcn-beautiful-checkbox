@@ -27,11 +27,11 @@ export default function Home() {
           rel="noreferrer"
           className={buttonVariants({ variant: "outline", size: "sm" })}
         >
-          <Icons.gitHub className="mr-1.5 size-3.5 sm:mr-2 sm:size-4" />
+          <Icons.gitHub className="mr-2 size-4" />
           <span className="hidden sm:inline">
             {`${siteConfig.repo.owner}/${siteConfig.repo.name}`}
           </span>
-          <span className="text-xs sm:hidden">{siteConfig.repo.name}</span>
+          <span className="sm:hidden">{siteConfig.repo.name}</span>
         </Link>
       </div>
       <div className="mt-10">
