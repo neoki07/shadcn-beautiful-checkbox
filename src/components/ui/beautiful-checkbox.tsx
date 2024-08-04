@@ -18,11 +18,9 @@ const Checkbox = React.forwardRef<
     )}
     {...props}
   >
-    <CheckboxPrimitive.Indicator className="flex items-center justify-center text-current data-[state=checked]:hidden">
-      <Minus strokeWidth={4} className="size-2.5" />
-    </CheckboxPrimitive.Indicator>
-    <CheckboxPrimitive.Indicator className="flex items-center justify-center text-current data-[state=indeterminate]:hidden">
+    <CheckboxPrimitive.Indicator className="flex items-center justify-center text-current [&>:first-child]:data-[state=indeterminate]:hidden [&>:last-child]:data-[state=checked]:hidden">
       <Check strokeWidth={4} className="size-2.5" />
+      <Minus strokeWidth={4} className="size-2.5" />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 ))
