@@ -8,7 +8,7 @@ const repo = {
 export const siteConfig = {
   name: repo.name,
   url,
-  ogImage: `${url}/og.png`,
+  ogImage: `${url}/og.jpg`,
   description:
     "A beautifully styled checkbox component, derived from shadcn/ui.",
   repo,

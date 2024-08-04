@@ -2,4 +2,4 @@
 
 A beautifully styled checkbox component, derived from shadcn/ui.
 
-![hero](public/og.png)
+![hero](public/og.jpg)
