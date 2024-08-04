@@ -1,3 +1,5 @@
+const url = "https://shadcn-beautiful-checkbox.vercel.app"
+
 const repo = {
   name: "shadcn-beautiful-checkbox",
   owner: "neoki07",
@@ -5,6 +7,8 @@ const repo = {
 
 export const siteConfig = {
   name: repo.name,
+  url,
+  ogImage: `${url}/og.png`,
   description:
     "A beautifully styled checkbox component, derived from shadcn/ui.",
   repo,
