@@ -87,3 +87,8 @@
     @apply px-4;
   }
 }
+
+.code-block .line,
+.npm-command-block .line {
+  @apply px-4 leading-6;
+}

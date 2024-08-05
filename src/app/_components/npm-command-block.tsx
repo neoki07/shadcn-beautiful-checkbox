@@ -14,7 +14,7 @@ export async function NpmCommandBlock({ command }: NpmCommandBlockProps) {
       <div className="mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-zinc-950 py-4 dark:bg-zinc-900">
         <div
           dangerouslySetInnerHTML={{ __html: highlightedCodeHtml }}
-          className="relative grid rounded font-mono text-sm [&>pre]:px-4"
+          className="npm-command-block relative grid rounded font-mono text-sm"
         />
       </div>
       <CopyNpmCommandButton
