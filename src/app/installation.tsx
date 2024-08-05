@@ -2,6 +2,7 @@ import fs from "fs"
 import path from "path"
 
 import { CodeBlock } from "./_components/code-block"
+import { NpmCommandBlock } from "./_components/npm-command-block"
 import { Step } from "./_components/step"
 import { Steps } from "./_components/steps"
 
@@ -20,10 +21,7 @@ export function Installation() {
       <div className="mt-2 [&_h3.font-heading]:text-base [&_h3.font-heading]:font-semibold">
         <Steps>
           <Step>Install the following dependencies:</Step>
-          <CodeBlock
-            code="npm install @radix-ui/react-checkbox"
-            language="bash"
-          />
+          <NpmCommandBlock command="npm install @radix-ui/react-checkbox" />
           <Step>Copy and paste the following code into your project.</Step>
           <CodeBlock code={componentSource} language="tsx" />
           <Step>Update the import paths to match your project setup.</Step>
