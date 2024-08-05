@@ -8,7 +8,9 @@ type CodeBlockProps = {
 }
 
 export async function CodeBlock({ code, language }: CodeBlockProps) {
-  const highlightedCodeHtml = await codeToHtml(code, language)
+  const trimmedCode = code.trim()
+
+  const highlightedCodeHtml = await codeToHtml(trimmedCode, language)
 
   return (
     <div className="relative">
@@ -18,7 +20,7 @@ export async function CodeBlock({ code, language }: CodeBlockProps) {
           className="code-block relative grid rounded font-mono text-sm"
         />
       </div>
-      <CopyButton value={code} className="absolute right-4 top-4" />
+      <CopyButton value={trimmedCode} className="absolute right-4 top-4" />
     </div>
   )
 }

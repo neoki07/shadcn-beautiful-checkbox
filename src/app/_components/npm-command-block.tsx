@@ -7,7 +7,8 @@ type NpmCommandBlockProps = {
 }
 
 export async function NpmCommandBlock({ command }: NpmCommandBlockProps) {
-  const highlightedCodeHtml = await codeToHtml(command, "bash")
+  const trimmedCommand = command.trim()
+  const highlightedCodeHtml = await codeToHtml(trimmedCommand, "bash")
 
   return (
     <div className="relative">
@@ -18,7 +19,7 @@ export async function NpmCommandBlock({ command }: NpmCommandBlockProps) {
         />
       </div>
       <CopyNpmCommandButton
-        command={command}
+        command={trimmedCommand}
         className="absolute right-4 top-4"
       />
     </div>
