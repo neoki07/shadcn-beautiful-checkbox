@@ -7,8 +7,11 @@ export function Usage() {
         Usage
       </h2>
       <div className="mt-2 [&_h3.font-heading]:text-base [&_h3.font-heading]:font-semibold">
-        <CodeBlock src='import { Checkbox } from "@/components/ui/beautiful-checkbox"' />
-        <CodeBlock src="<Checkbox />" />
+        <CodeBlock
+          code='import { Checkbox } from "@/components/ui/beautiful-checkbox"'
+          language="tsx"
+        />
+        <CodeBlock code="<Checkbox />" language="tsx" />
       </div>
     </div>
   )

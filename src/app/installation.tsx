@@ -20,9 +20,12 @@ export function Installation() {
       <div className="mt-2 [&_h3.font-heading]:text-base [&_h3.font-heading]:font-semibold">
         <Steps>
           <Step>Install the following dependencies:</Step>
-          <CodeBlock src="npm install @radix-ui/react-checkbox" />
+          <CodeBlock
+            code="npm install @radix-ui/react-checkbox"
+            language="bash"
+          />
           <Step>Copy and paste the following code into your project.</Step>
-          <CodeBlock src={componentSource} />
+          <CodeBlock code={componentSource} language="tsx" />
           <Step>Update the import paths to match your project setup.</Step>
         </Steps>
       </div>
