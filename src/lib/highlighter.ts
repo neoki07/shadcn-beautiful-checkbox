@@ -244,5 +244,8 @@ export async function codeToHtml(code: string, language: string) {
   return await shikiCodeToHtml(code, {
     lang: language,
     theme: lambdaStudioBlackout,
+    colorReplacements: {
+      "#000": "transparent", // Transparent background
+    },
   })
 }
