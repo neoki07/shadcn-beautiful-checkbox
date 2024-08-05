@@ -1,3 +1,5 @@
+import { Fragment } from "react"
+
 import { Checkbox as BeautifulCheckbox } from "@/components/ui/beautiful-checkbox"
 import { Checkbox } from "@/components/ui/checkbox"
 
@@ -25,7 +27,7 @@ export function Demo() {
                 </legend>
                 <div className="grid grid-flow-col grid-rows-3 gap-3 sm:grid-flow-row sm:grid-cols-3">
                   {[false, true].map((disabled) => (
-                    <>
+                    <Fragment key={String(disabled)}>
                       {["unchecked", "checked", "indeterminate"].map(
                         (state) => {
                           const checkboxId = `${title}-${state}${
@@ -56,7 +58,7 @@ export function Demo() {
                           )
                         }
                       )}
-                    </>
+                    </Fragment>
                   ))}
                 </div>
               </fieldset>
